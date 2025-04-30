@@ -1,0 +1,86 @@
+﻿@model BlackBook_System.Models.StudentsEnrollment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="d-flex flex-column align-items-center">
+    <h4>Students Enrollment</h4>
+    <hr />
+    <dl class="row" justify-content-center">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ADMNO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ADMNO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.STUDENTNAME)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.STUDENTNAME)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GENDER)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GENDER)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLASSADMITTED)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLASSADMITTED)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ADMISSIONDATE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ADMISSIONDATE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GUARDIAN_NAME)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GUARDIAN_NAME)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CONTACTNUMBER)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CONTACTNUMBER)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ADDRESS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificateName)
+        </dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.CertificateName))
+            {
+
+                <span>@Model.CertificateName</span>
+            }
+            else
+            {
+                <span class="text-muted">No Certificate Uploaded</span>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.EnrollmentID" class="btn btn-warning">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

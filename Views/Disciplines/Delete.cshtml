@@ -1,0 +1,75 @@
+﻿@model BlackBook_System.Models.Discipline
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Discipline</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ADMNO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ADMNO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.STUDENTNAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.STUDENTNAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CLASS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CLASS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.INDISCIPLINECASE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.INDISCIPLINECASE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AUDITED_BY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AUDITED_BY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AUDITED_DATETIME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AUDITED_DATETIME)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ACTION_TAKEN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ACTION_TAKEN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CASE_STATUS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CASE_STATUS)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

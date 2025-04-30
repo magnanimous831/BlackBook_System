@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BlackBook_System.Models.Occurrences>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Occurrences</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherOnDuty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DAILYACTIVITY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PLACE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RECORDED_BY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REMARKS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTimeOccurred)
+            </th>
+            <th> Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.TeacherOnDuty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DAILYACTIVITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PLACE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RECORDED_BY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REMARKS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTimeOccurred)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

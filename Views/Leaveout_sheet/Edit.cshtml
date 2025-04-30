@@ -1,0 +1,89 @@
+﻿@model BlackBook_System.Models.Leaveout_sheet
+
+@{
+    ViewData["Title"] = "Edit Leaveout Sheet";
+}
+
+<h1><i class="fas fa-edit"></i> Edit Leaveout Sheet</h1>
+
+<h4><i class="fas fa-clipboard-list"></i> Leaveout Sheet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="LEAVEOUTID" />
+            <div class="form-group">
+                <label asp-for="STUDENTNAME" class="control-label"></label>
+                <input asp-for="STUDENTNAME" class="form-control" />
+                <span asp-validation-for="STUDENTNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ADMNO" class="control-label"></label>
+                <input asp-for="ADMNO" class="form-control" />
+                <span asp-validation-for="ADMNO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLASS" class="control-label"></label>
+                <input asp-for="CLASS" class="form-control" />
+                <span asp-validation-for="CLASS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LEAVINGDATE" class="control-label"></label>
+                <input asp-for="LEAVINGDATE" class="form-control" />
+                <span asp-validation-for="LEAVINGDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REASONFORLEAVING" class="control-label"></label>
+                <input asp-for="REASONFORLEAVING" class="form-control" />
+                <span asp-validation-for="REASONFORLEAVING" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RETURNDATE" class="control-label"></label>
+                <input asp-for="RETURNDATE" class="form-control" />
+                <span asp-validation-for="RETURNDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLASSTEACHER" class="control-label"></label>
+                <input asp-for="CLASSTEACHER" class="form-control" />
+                <span asp-validation-for="CLASSTEACHER" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SIGNATUREDATE" class="control-label"></label>
+                <input asp-for="SIGNATUREDATE" class="form-control" />
+                <span asp-validation-for="SIGNATUREDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOD" class="control-label"></label>
+                <input asp-for="TOD" class="form-control" />
+                <span asp-validation-for="TOD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TODDATE" class="control-label"></label>
+                <input asp-for="TODDATE" class="form-control" />
+                <span asp-validation-for="TODDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRINCIPAL" class="control-label"></label>
+                <input asp-for="PRINCIPAL" class="form-control" />
+                <span asp-validation-for="PRINCIPAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SIGNDATE" class="control-label"></label>
+                <input asp-for="SIGNDATE" class="form-control" />
+                <span asp-validation-for="SIGNDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

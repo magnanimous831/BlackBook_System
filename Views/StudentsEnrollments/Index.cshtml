@@ -1,0 +1,79 @@
+﻿@using System.IO
+@model IEnumerable<BlackBook_System.Models.StudentsEnrollment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex flex-column align-items-center">
+    <h1>Enrolled Students</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>
+
+    <div class="table-responsive">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ADMNO)</th>
+                    <th>@Html.DisplayNameFor(model => model.STUDENTNAME)</th>
+                    <th>@Html.DisplayNameFor(model => model.GENDER)</th>
+                    <th>@Html.DisplayNameFor(model => model.DOB)</th>
+                    <th>@Html.DisplayNameFor(model => model.CLASSADMITTED)</th>
+                    <th>@Html.DisplayNameFor(model => model.ADMISSIONDATE)</th>
+                    <th>@Html.DisplayNameFor(model => model.GUARDIAN_NAME)</th>
+                    <th>@Html.DisplayNameFor(model => model.CONTACTNUMBER)</th>
+                    <th>@Html.DisplayNameFor(model => model.ADDRESS)</th>
+                    <th>Certificate</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ADMNO)</td>
+                        <td>@Html.DisplayFor(modelItem => item.STUDENTNAME)</td>
+                        <td>@Html.DisplayFor(modelItem => item.GENDER)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DOB)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CLASSADMITTED)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ADMISSIONDATE)</td>
+                        <td>@Html.DisplayFor(modelItem => item.GUARDIAN_NAME)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CONTACTNUMBER)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ADDRESS)</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.CertificateName))
+                            {
+                                <a href="~/certificates/@item.CertificateName" target="_blank" class="text-primary">
+                                    <i class="fas fa-file-alt me-1"></i>
+                                    View Certificate
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="text-muted">
+                                    <i class="fas fa-times-circle me-1"></i>
+                                    No certificate
+                                </span>
+                            }
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <a asp-action="Edit" asp-route-id="@item.EnrollmentID" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.EnrollmentID" class="btn btn-sm btn-outline-info">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.EnrollmentID" class="btn btn-sm btn-outline-danger">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

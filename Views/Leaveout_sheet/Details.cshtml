@@ -1,0 +1,90 @@
+﻿@model BlackBook_System.Models.Leaveout_sheet
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Leaveout_sheet</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.STUDENTNAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.STUDENTNAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ADMNO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ADMNO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CLASS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CLASS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LEAVINGDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LEAVINGDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REASONFORLEAVING)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REASONFORLEAVING)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RETURNDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RETURNDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CLASSTEACHER)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CLASSTEACHER)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SIGNATUREDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SIGNATUREDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TOD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TOD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TODDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TODDATE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PRINCIPAL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PRINCIPAL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SIGNDATE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SIGNDATE)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.LEAVEOUTID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
