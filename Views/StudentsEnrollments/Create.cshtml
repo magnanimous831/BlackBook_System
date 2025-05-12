@@ -71,9 +71,39 @@
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="ADDRESS" class="control-label"></label>
-                    <input asp-for="ADDRESS" class="form-control" />
-                    <span asp-validation-for="ADDRESS" class="text-danger"></span>
+                    <label for="County">County</label>
+                    <select asp-for="County" class="form-control" id="CountyDropdown">
+                        <option value="">Select County</option>
+                        @{
+                            var counties = ViewBag.Counties as List<string>;
+                        }
+
+                        @if (counties != null)
+                        {
+                            foreach (var county in counties)
+                            {
+                                <option value="@county">@county</option>
+                            }
+                        }
+
+                    </select>
+                    <span asp-validation-for="County" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SubCounty">SubCounty</label>
+                    <select asp-for="SubCounty" class="form-control" id="SubCountyDropdown">
+                        <option value="">Select SubCounty</option>
+                    </select>
+                    <span asp-validation-for="SubCounty" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Ward">Ward</label>
+                    <select asp-for="Ward" class="form-control" id="WardDropdown">
+                        <option value="">Select Ward</option>
+                    </select>
+                    <span asp-validation-for="Ward" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
@@ -100,7 +130,44 @@
 
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        $(document).ready(function () {
+            $('#CountyDropdown').change(function () {
+                var county = $(this).val();
+                $('#SubCountyDropdown').empty().append('<option value="">Select SubCounty</option>');
+                $('#WardDropdown').empty().append('<option value="">Select Ward</option>');
+
+                if (county) {
+                    $.get('/StudentsEnrollments/GetSubCounties', { county: county }, function (data) {
+                        $.each(data, function (index, value) {
+                            $('#SubCountyDropdown').append($('<option>', {
+                                value: value,
+                                text: value
+                            }));
+                        });
+                    });
+                }
+            });
+
+            $('#SubCountyDropdown').change(function () {
+                var county = $('#CountyDropdown').val();
+                var subCounty = $(this).val();
+                $('#WardDropdown').empty().append('<option value="">Select Ward</option>');
+
+                if (subCounty) {
+                    $.get('/StudentsEnrollments/GetWards', { county: county, subCounty: subCounty }, function (data) {
+                        $.each(data, function (index, value) {
+                            $('#WardDropdown').append($('<option>', {
+                                value: value,
+                                text: value
+                            }));
+                        });
+                    });
+                }
+            });
+        });
+
         function updateFileName(input) {
             var fileName = input.files[0] ? input.files[0].name : 'Choose file';
             var label = input.nextElementSibling;

@@ -8,6 +8,7 @@ namespace BlackBook_System.Models
         public int LeaveoutSheets { get; set; }
         public int Occurrences { get; set; }
         public int DisciplineCases { get; set; }
+        public int TotalTeachers { get; set; }
 
         public DashboardStats()
         {
@@ -15,6 +16,7 @@ namespace BlackBook_System.Models
             LeaveoutSheets = 0;
             Occurrences = 0;
             DisciplineCases = 0;
+            TotalTeachers = 0;
         }
     }
 } 

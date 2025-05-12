@@ -9,9 +9,9 @@ namespace BlackBook_System.Controllers
 {
     public class DashboardController : Controller
     {
-        private readonly BlackBook_SystemContext _context;
+        private readonly BlackBookDbContext _context;
 
-        public DashboardController(BlackBook_SystemContext context)
+        public DashboardController(BlackBookDbContext context)
         {
             _context = context;
         }
@@ -25,6 +25,7 @@ namespace BlackBook_System.Controllers
                 var leaveoutSheets = await _context.Leaveout_sheet.CountAsync();
                 var occurrences = await _context.Occurrences.CountAsync();
                 var disciplineCases = await _context.Discipline.CountAsync();
+                var totalTeachers = await _context.Teachers_List.CountAsync();
 
                 // Create a view model with all statistics
                 var dashboardStats = new DashboardStats
@@ -32,7 +33,8 @@ namespace BlackBook_System.Controllers
                     EnrolledStudents = enrolledStudents,
                     LeaveoutSheets = leaveoutSheets,
                     Occurrences = occurrences,
-                    DisciplineCases = disciplineCases
+                    DisciplineCases = disciplineCases,
+                    TotalTeachers = totalTeachers
                 };
 
                 return View(dashboardStats);

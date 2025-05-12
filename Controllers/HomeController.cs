@@ -1,6 +1,6 @@
 using System.Diagnostics;
-using BlackBook_System.Models;
 using Microsoft.AspNetCore.Mvc;
+using BlackBook_System.Models;
 
 namespace BlackBook_System.Controllers
 {

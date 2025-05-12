@@ -4,6 +4,16 @@ namespace BlackBook_System.Models
 {
     public class Leaveout_sheet
     {
+        public Leaveout_sheet()
+        {
+            STUDENTNAME = "";
+            ADMNO = "";
+            CLASS = "";
+            REASONFORLEAVING = "";
+            CLASSTEACHER = "";
+            TOD = "";
+            PRINCIPAL = "";
+        }
         [Key]
         public int LEAVEOUTID { get; set; }
 
@@ -20,23 +30,23 @@ namespace BlackBook_System.Models
         public required string CLASS { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        public DateTime LEAVINGDATE { get; set; }
+        [DataType(DataType.DateTime)]
+        public required DateTime LEAVINGDATE { get; set; }
 
         [Required]
         [StringLength(300)]
         public required string REASONFORLEAVING { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        public DateTime RETURNDATE { get; set; }
+        [DataType(DataType.DateTime)]
+        public   DateTime RETURNDATE { get; set; }
 
         [Required]
         [StringLength(100)]
-        public required string CLASSTEACHER { get; set; }
+        public  string CLASSTEACHER { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime SIGNATUREDATE { get; set; }
 
         [Required]
@@ -44,15 +54,18 @@ namespace BlackBook_System.Models
         public required string TOD { get; set; }  // Teacher on Duty
 
         [Required]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime TODDATE { get; set; }
 
         [Required]
         [StringLength(100)]
-        public required string PRINCIPAL { get; set; }
+        public  string PRINCIPAL { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime SIGNDATE { get; set; }
+
+        [StringLength(500)]
+        public string? CertificatePath { get; set; }
     }
 }

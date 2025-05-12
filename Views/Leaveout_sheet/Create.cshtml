@@ -1,4 +1,5 @@
 ﻿@model BlackBook_System.Models.Leaveout_sheet
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 @{
     ViewData["Title"] = "Create Leaveout Sheet";
@@ -100,22 +101,31 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const searchBox = document.getElementById("searchBox");
+            const studentNameInput = document.getElementById("STUDENTNAME");
+            const admnoInput = document.getElementById("ADMNO");
+            const classInput = document.getElementById("CLASS");
+            let debounceTimer;
 
-            searchBox.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault(); // prevent form submission if any
-                    searchStudent();
-                }
-            });
+            // Create autocomplete dropdown
+            const autocompleteList = document.createElement('ul');
+            autocompleteList.className = 'autocomplete-items';
+            searchBox.parentNode.appendChild(autocompleteList);
 
-            function searchStudent() {
-                const query = searchBox.value.trim();
+            searchBox.addEventListener('input', function (e) {
+                clearTimeout(debounceTimer);
+                const query = e.target.value.trim();
 
                 if (query.length < 2) {
-                    alert("Please enter at least 2 characters.");
+                    autocompleteList.innerHTML = '';
                     return;
                 }
 
+                debounceTimer = setTimeout(() => {
+                    searchStudent(query);
+                }, 300);
+            });
+
+            function searchStudent(query) {
                 fetch('/Leaveout_sheet/SearchStudent?query=' + encodeURIComponent(query))
                     .then(response => {
                         if (!response.ok) {
@@ -124,19 +134,67 @@
                         return response.json();
                     })
                     .then(data => {
-                        document.getElementById("STUDENTNAME").value = data.STUDENTNAME;
-                        document.getElementById("ADMNO").value = data.ADMNO;
-                        document.getElementById("CLASS").value = data.CLASS;
+                        autocompleteList.innerHTML = '';
+                        
+                        if (data) {
+                            const item = document.createElement('li');
+                            item.textContent = `${data.STUDENTNAME} (${data.ADMNO})`;
+                            item.addEventListener('click', () => {
+                                fillStudentDetails(data);
+                                autocompleteList.innerHTML = '';
+                            });
+                            autocompleteList.appendChild(item);
+                        }
                     })
                     .catch(error => {
-                        alert(error.message);
-                        document.getElementById("STUDENTNAME").value = "";
-                        document.getElementById("ADMNO").value = "";
-                        document.getElementById("CLASS").value = "";
+                        autocompleteList.innerHTML = '';
+                        console.error('Error:', error);
                     });
             }
+
+            function fillStudentDetails(data) {
+                studentNameInput.value = data.STUDENTNAME;
+                admnoInput.value = data.ADMNO;
+                classInput.value = data.CLASS;
+                searchBox.value = `${data.STUDENTNAME} (${data.ADMNO})`;
+            }
+
+            // Close autocomplete when clicking outside
+            document.addEventListener('click', function (e) {
+                if (e.target !== searchBox) {
+                    autocompleteList.innerHTML = '';
+                }
+            });
         });
     </script>
 
-       
+    <style>
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .autocomplete-items li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .autocomplete-items li:hover {
+            background-color: #e9e9e9;
+        }
+
+        .form-group {
+            position: relative;
+        }
+    </style>
 }

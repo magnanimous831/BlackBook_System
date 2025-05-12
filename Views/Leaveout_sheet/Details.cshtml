@@ -84,7 +84,34 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.LEAVEOUTID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="mt-4">
+    <h5>Certificate</h5>
+    @if (!string.IsNullOrEmpty(Model.CertificatePath))
+    {
+        <div class="mb-3">
+            <a asp-action="ViewCertificate" asp-route-id="@Model.LEAVEOUTID" class="btn btn-primary">
+                <i class="fas fa-eye"></i> View Certificate
+            </a>
+        </div>
+    }
+    
+    <form asp-action="UploadCertificate" asp-route-id="@Model.LEAVEOUTID" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="certificate">Upload Certificate (PDF only)</label>
+            <input type="file" name="certificate" id="certificate" class="form-control-file" accept=".pdf" />
+        </div>
+        <button type="submit" class="btn btn-success mt-2">
+            <i class="fas fa-upload"></i> Upload Certificate
+        </button>
+    </form>
+</div>
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.LEAVEOUTID" class="btn btn-warning">
+        <i class="fas fa-edit"></i> Edit
+    </a>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Back to List
+    </a>
 </div>

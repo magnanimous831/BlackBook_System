@@ -4,18 +4,28 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Discipline Cases</h1>
+<h1 class="fas fa-gavel">Discipline Cases</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="fas fa-plus-circle"></i>Create New
+    </a>
 </p>
  
-<form asp-controller="Discipline" asp-action="Index" method="get">
+<form asp-controller="Disciplines" asp-action="Index" method="get">
     <p>
         <label>Title: <input type="text" name="SearchString" /></label>
         <input type="submit" value="Filter" />
     </p>
 </form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">
+        @ViewBag.Message
+    </div>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -45,10 +55,15 @@
                 <td>@Html.DisplayFor(modelItem => item.ACTION_TAKEN)</td>
                 <td>@Html.DisplayFor(modelItem => item.CASE_STATUS)</td>
                 <td>
-                   
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-primary">
+                        <i class="fas fa-edit"></i> Edit
+                    </a> |
+                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-sm btn-info">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </a>
                 </td>
             </tr>
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlackBook_System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ae8da20b8c4d5ae9be842fcd7d6bd64066c4ea4")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlackBook_System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlackBook_System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

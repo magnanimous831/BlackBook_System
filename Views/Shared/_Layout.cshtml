@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,17 +19,60 @@
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BlackBook App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <div class="ms-auto d-flex align-items-center">
+
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            var user = await UserManager.GetUserAsync(User);
+                            if (user != null)
+                            {
+                            
+                            var roles = await UserManager.GetRolesAsync(user);
+                            var role = roles.FirstOrDefault();
+
+                            // Define icon class based on role
+                            var iconClass = role switch
+                            {
+                                "Admin" => "fas fa-user-shield",        // Admin icon
+                                "Teacher" => "fas fa-chalkboard-teacher", // Teacher icon
+                                "Principal" => "fas fa-school",          // Principal icon
+                                _ => "fas fa-user"                       // Default user icon
+                            };
+                        
+
+                            <span class="me-2 text-dark fw-bold">
+                                <i class="fas @iconClass"></i> @role
+                            </span>
+
+                            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </button>
+                            </form>
+                           }
+                        }
+
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <div style="display: flex; min-height: 100vh;">
         <!-- Sidebar (rendered once here) -->
-        @await Html.PartialAsync("Sidebar") <!-- Ensure Sidebar is correctly updated -->
+        <p style="color:red;">Auth: @User.Identity?.IsAuthenticated == true</p>
+
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            @await Html.PartialAsync("Sidebar")
+        }
+
         <!-- Main Content (dynamic area) -->
         <div class="main-content container" id="main-content" style="flex-grow: 1; padding: 4px; margin-left: 220px;">
             @RenderBody()

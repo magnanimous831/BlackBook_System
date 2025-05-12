@@ -10,6 +10,9 @@ C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\BlackBo
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Humanizer.dll
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Build.dll
@@ -36,6 +39,8 @@ C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microso
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
@@ -242,6 +247,7 @@ C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBo
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.RazorAssemblyInfo.cache
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.sourcelink.json
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\scopedcss\bundle\BlackBook_System.styles.css
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\scopedcss\projectbundle\BlackBook_System.bundle.scp.css
@@ -254,10 +260,10 @@ C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\staticw
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BlackBook_System.props
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BlackBook_System.props
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBoo.4FAC4C20.Up2Date
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\refint\BlackBook_System.dll
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.pdb
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\BlackBook_System.genruntimeconfig.cache
 C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\ref\BlackBook_System.dll
-C:\Users\User\Desktop\BlackBook_System\BlackBook_System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

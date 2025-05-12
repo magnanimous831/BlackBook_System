@@ -10,9 +10,9 @@ namespace BlackBook_System.Controllers
 {
     public class OccurrencesController : Controller
     {
-        private readonly BlackBook_SystemContext _context;
+        private readonly BlackBookDbContext _context;
 
-        public OccurrencesController(BlackBook_SystemContext context)
+        public OccurrencesController(BlackBookDbContext context)
         {
             _context = context;
         }

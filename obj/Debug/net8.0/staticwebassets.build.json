@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MKLH5lbw5LQxsyoj5dxsxWYSMQq5dEz4JTbSXFZapm4=",
+  "Hash": "W+Uq1LkwzYzUYDdDBmvrb9Ax/WwvjUJH3FZAft2XtxQ=",
   "Source": "BlackBook_System",
   "BasePath": "_content/BlackBook_System",
   "Mode": "Default",
@@ -143,6 +143,90 @@
       "OriginalItemSpec": "wwwroot\\certificates\\b82d2510-9346-47fa-a463-11c67e07177f_hh.PNG"
     },
     {
+      "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\download_bbb42469.jpg",
+      "SourceId": "BlackBook_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\",
+      "BasePath": "_content/BlackBook_System",
+      "RelativePath": "certificates/download_bbb42469#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9rrt87vc73",
+      "Integrity": "O1pyZcutmBTuUgumKxsy+NHNG/HlpTVeUK+AUS4JnKs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificates\\download_bbb42469.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\FB_IMG_1738315795105_3bfd166e.jpg",
+      "SourceId": "BlackBook_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\",
+      "BasePath": "_content/BlackBook_System",
+      "RelativePath": "certificates/FB_IMG_1738315795105_3bfd166e#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0e56vg7xib",
+      "Integrity": "ODBZSTM8/3nQMNs64Epx3+7S1cBsi3WkJ+SfjYMANtY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificates\\FB_IMG_1738315795105_3bfd166e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\g_665a9741.PNG",
+      "SourceId": "BlackBook_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\",
+      "BasePath": "_content/BlackBook_System",
+      "RelativePath": "certificates/g_665a9741#[.{fingerprint}]?.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0r99q8xpo5",
+      "Integrity": "nGO3/tnVi/kXwbiniNKltohYXDfteQuT+JAqDDxG3yg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificates\\g_665a9741.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\hh_3e5beaad.PNG",
+      "SourceId": "BlackBook_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\",
+      "BasePath": "_content/BlackBook_System",
+      "RelativePath": "certificates/hh_3e5beaad#[.{fingerprint}]?.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8yrtn088tm",
+      "Integrity": "QNZ9kjUBEI+e9+OZUSNslDkK5MsnghNpoBxBJHipd+c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificates\\hh_3e5beaad.PNG"
+    },
+    {
       "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\css\\site.css",
       "SourceId": "BlackBook_System",
       "SourceType": "Discovered",
@@ -183,6 +267,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\images\\bg.jpg",
+      "SourceId": "BlackBook_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\",
+      "BasePath": "_content/BlackBook_System",
+      "RelativePath": "images/bg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f1gxjib0k7",
+      "Integrity": "jQUshc1HPbeLt0porrVgW3Kqnt7ykul+8Y/xu5K0AOc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\images\\classroom.jpg",
+      "SourceId": "BlackBook_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\",
+      "BasePath": "_content/BlackBook_System",
+      "RelativePath": "images/classroom#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6e437xcj3j",
+      "Integrity": "Arx4Pg2/4kHKdoJHSoK+7CbYqtS4b7kjnWD+0HqdeUw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\classroom.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\js\\site.js",
@@ -1427,7 +1553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 06:32:03 GMT"
+          "Value": "Mon, 12 May 2025 09:44:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1464,7 +1590,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 06:32:03 GMT"
+          "Value": "Mon, 12 May 2025 09:44:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1509,7 +1635,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 06:32:03 GMT"
+          "Value": "Mon, 12 May 2025 09:44:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1554,7 +1680,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 06:32:03 GMT"
+          "Value": "Mon, 12 May 2025 09:44:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1897,6 +2023,334 @@
       ]
     },
     {
+      "Route": "certificates/download_bbb42469.9rrt87vc73.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\download_bbb42469.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O1pyZcutmBTuUgumKxsy+NHNG/HlpTVeUK+AUS4JnKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 06:01:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9rrt87vc73"
+        },
+        {
+          "Name": "label",
+          "Value": "certificates/download_bbb42469.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O1pyZcutmBTuUgumKxsy+NHNG/HlpTVeUK+AUS4JnKs="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/download_bbb42469.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\download_bbb42469.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O1pyZcutmBTuUgumKxsy+NHNG/HlpTVeUK+AUS4JnKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 06:01:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O1pyZcutmBTuUgumKxsy+NHNG/HlpTVeUK+AUS4JnKs="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/FB_IMG_1738315795105_3bfd166e.0e56vg7xib.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\FB_IMG_1738315795105_3bfd166e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "61964"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ODBZSTM8/3nQMNs64Epx3+7S1cBsi3WkJ+SfjYMANtY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 05:58:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0e56vg7xib"
+        },
+        {
+          "Name": "label",
+          "Value": "certificates/FB_IMG_1738315795105_3bfd166e.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ODBZSTM8/3nQMNs64Epx3+7S1cBsi3WkJ+SfjYMANtY="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/FB_IMG_1738315795105_3bfd166e.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\FB_IMG_1738315795105_3bfd166e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "61964"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ODBZSTM8/3nQMNs64Epx3+7S1cBsi3WkJ+SfjYMANtY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 05:58:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ODBZSTM8/3nQMNs64Epx3+7S1cBsi3WkJ+SfjYMANtY="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/g_665a9741.0r99q8xpo5.PNG",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\g_665a9741.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nGO3/tnVi/kXwbiniNKltohYXDfteQuT+JAqDDxG3yg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:26:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0r99q8xpo5"
+        },
+        {
+          "Name": "label",
+          "Value": "certificates/g_665a9741.PNG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nGO3/tnVi/kXwbiniNKltohYXDfteQuT+JAqDDxG3yg="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/g_665a9741.PNG",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\g_665a9741.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nGO3/tnVi/kXwbiniNKltohYXDfteQuT+JAqDDxG3yg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:26:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nGO3/tnVi/kXwbiniNKltohYXDfteQuT+JAqDDxG3yg="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/hh_3e5beaad.8yrtn088tm.PNG",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\hh_3e5beaad.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QNZ9kjUBEI+e9+OZUSNslDkK5MsnghNpoBxBJHipd+c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:27:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8yrtn088tm"
+        },
+        {
+          "Name": "label",
+          "Value": "certificates/hh_3e5beaad.PNG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QNZ9kjUBEI+e9+OZUSNslDkK5MsnghNpoBxBJHipd+c="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/hh_3e5beaad.PNG",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\certificates\\hh_3e5beaad.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QNZ9kjUBEI+e9+OZUSNslDkK5MsnghNpoBxBJHipd+c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 08:27:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QNZ9kjUBEI+e9+OZUSNslDkK5MsnghNpoBxBJHipd+c="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2057,6 +2511,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.f1gxjib0k7.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\images\\bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12333763"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jQUshc1HPbeLt0porrVgW3Kqnt7ykul+8Y/xu5K0AOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 07:11:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f1gxjib0k7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jQUshc1HPbeLt0porrVgW3Kqnt7ykul+8Y/xu5K0AOc="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\images\\bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12333763"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jQUshc1HPbeLt0porrVgW3Kqnt7ykul+8Y/xu5K0AOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 07:11:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jQUshc1HPbeLt0porrVgW3Kqnt7ykul+8Y/xu5K0AOc="
+        }
+      ]
+    },
+    {
+      "Route": "images/classroom.6e437xcj3j.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\images\\classroom.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "115519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Arx4Pg2/4kHKdoJHSoK+7CbYqtS4b7kjnWD+0HqdeUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 07:17:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6e437xcj3j"
+        },
+        {
+          "Name": "label",
+          "Value": "images/classroom.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Arx4Pg2/4kHKdoJHSoK+7CbYqtS4b7kjnWD+0HqdeUw="
+        }
+      ]
+    },
+    {
+      "Route": "images/classroom.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\wwwroot\\images\\classroom.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "115519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Arx4Pg2/4kHKdoJHSoK+7CbYqtS4b7kjnWD+0HqdeUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 07:17:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Arx4Pg2/4kHKdoJHSoK+7CbYqtS4b7kjnWD+0HqdeUw="
         }
       ]
     },

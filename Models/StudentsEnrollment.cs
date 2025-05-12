@@ -42,17 +42,14 @@ namespace BlackBook_System.Models
         [Phone]
         [Display(Name = "Contact Number")]
         public required string CONTACTNUMBER { get; set; }
-
-        [Required]
-        public required string ADDRESS { get; set; }
-
         [Required]
         [Display(Name = "County")]
         public required string County { get; set; }
 
         [Required]
-        [Display(Name = "SubCounty / Location")]
+        [Display(Name = "SubCounty")]
         public required string SubCounty { get; set; }
+        public required string Ward { get; set; }
 
         // Removed the CertificatePath field
         // Placeholder for displaying uploaded certificate/document name

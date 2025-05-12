@@ -12,9 +12,9 @@ namespace BlackBook_System.Controllers
 {
     public class DisciplinesController : Controller
     {
-        private readonly BlackBook_SystemContext _context;
+        private readonly BlackBookDbContext _context;
 
-        public DisciplinesController(BlackBook_SystemContext context)
+        public DisciplinesController(BlackBookDbContext context)
         {
             _context = context;
         }
@@ -32,7 +32,11 @@ namespace BlackBook_System.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                discipline = discipline.Where(s => s.STUDENTNAME!.ToUpper().Contains(searchString.ToUpper()));
+                discipline = discipline.Where(s => s.INDISCIPLINECASE!.ToUpper().Contains(searchString.ToUpper()));
+                if (!discipline.Any())
+                {
+                    ViewBag.Message = "No records found matching your search criteria.";
+                }
             }
             return View(await discipline.ToListAsync());
         }
@@ -62,8 +66,6 @@ namespace BlackBook_System.Controllers
         }
 
         // POST: Disciplines/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,DATE,ADMNO,STUDENTNAME,CLASS,INDISCIPLINECASE,AUDITED_BY,AUDITED_DATETIME,ACTION_TAKEN,CASE_STATUS")] Discipline discipline)
@@ -94,8 +96,6 @@ namespace BlackBook_System.Controllers
         }
 
         // POST: Disciplines/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,DATE,ADMNO,STUDENTNAME,CLASS,INDISCIPLINECASE,AUDITED_BY,AUDITED_DATETIME,ACTION_TAKEN,CASE_STATUS")] Discipline discipline)
@@ -160,6 +160,7 @@ namespace BlackBook_System.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
         [HttpGet]
         public async Task<IActionResult> FixNullDates()
         {

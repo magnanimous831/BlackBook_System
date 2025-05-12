@@ -2,8 +2,14 @@ wwwroot\certificates\279157d3-a463-441f-ba93-ff9dc650adf2_hh.PNG
 wwwroot\certificates\6134a869-a2cb-4429-bdf7-f148d003b959_hh.PNG
 wwwroot\certificates\943e0649-b012-487e-a63f-4faa35b53639_hh.PNG
 wwwroot\certificates\b82d2510-9346-47fa-a463-11c67e07177f_hh.PNG
+wwwroot\certificates\download_bbb42469.jpg
+wwwroot\certificates\FB_IMG_1738315795105_3bfd166e.jpg
+wwwroot\certificates\g_665a9741.PNG
+wwwroot\certificates\hh_3e5beaad.PNG
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\bg.jpg
+wwwroot\images\classroom.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

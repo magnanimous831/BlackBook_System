@@ -1,0 +1,42 @@
+@model List<BlackBook_System.Models.UserRoleViewModel>
+
+@{
+    ViewData["Title"] = "User Roles";
+}
+
+<div class="container mt-4">
+    <h2>Manage User Roles</h2>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Current Roles</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.UserName</td>
+                                <td>@user.Email</td>
+                                <td>@string.Join(", ", user.Roles)</td>
+                                <td>
+                                    <a href="@Url.Action("EditUserRoles", "UserManagement", new { userId = user.UserId })" 
+                                       class="btn btn-primary btn-sm">
+                                        Edit Roles
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> 

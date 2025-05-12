@@ -1,0 +1,43 @@
+@model IEnumerable<BlackBook_System.Models.ClassWiseStats>
+
+@{
+    ViewData["Title"] = "Class-wise Report";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4"><i class="fas fa-chart-pie"></i> Class-wise Report</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Total Students</th>
+                            <th>Male Students</th>
+                            <th>Female Students</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var stat in Model)
+                        {
+                            <tr>
+                                <td>@stat.Class</td>
+                                <td>@stat.StudentCount</td>
+                                <td>@stat.MaleCount</td>
+                                <td>@stat.FemaleCount</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Reports
+        </a>
+    </div>
+</div> 

@@ -37,7 +37,8 @@ namespace BlackBook_System.Models
 
         [Required]
         [Display(Name = "Audited By")]
-        [StringLength(100)]
+        [RegularExpression(@"^[A-Z][a-zA-Z\s]*$", ErrorMessage = "Name must start with a capital letter and contain only letters.")]
+        [StringLength(100, MinimumLength = 3)]
         public string AUDITED_BY { get; set; } = string.Empty;
 
         [Required]
@@ -51,7 +52,7 @@ namespace BlackBook_System.Models
 
         [Display(Name = "Case Status")]
         [StringLength(50)]
-        [RegularExpression(@"^(Open|Closed|Pending)$", ErrorMessage = "Status must be Open, Closed, or Pending.")]
+        [RegularExpression(@"^(Open|Closed|Pending)$", ErrorMessage = "Status must be Opened, In-Progress, Closed, or Pending.")]
         public string? CASE_STATUS { get; set; }
     }
 }
