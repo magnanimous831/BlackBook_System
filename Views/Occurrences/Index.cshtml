@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BlackBook_System.Models.Occurrences>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="fas fa-calendar-check">Occurrences</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+    <i class="fas fa-plus-circle"></i>Create New
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherOnDuty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DAILYACTIVITY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PLACE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RECORDED_BY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REMARKS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTimeOccurred)
+            </th>
+            <th> Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.TeacherOnDuty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DAILYACTIVITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PLACE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RECORDED_BY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REMARKS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTimeOccurred)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-sm btn-outline-primary">Edit
+                        <i class="fas fa-edit"></i>
+                    </a>|
+                    <a asp-action="Details" asp-route-id="@item.id" class="btn btn-sm btn-outline-info">Details
+                    <i class="fas fa-info-circle"></i>
+                </a>|
+                    <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-sm btn-outline-danger">Delete
+                        <i class="fas fa-trash"></i>
+                    </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

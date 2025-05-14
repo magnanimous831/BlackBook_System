@@ -1,0 +1,53 @@
+@model IEnumerable<BlackBook_System.Models.Leaveout_sheet>
+
+@{
+    ViewData["Title"] = "Leaveout Report";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4"><i class="fas fa-clipboard-list"></i> Leaveout Report</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Admission No</th>
+                            <th>Class</th>
+                            <th>Leaving Date</th>
+                            <th>Reason</th>
+                            <th>Return Date</th>
+                            <th>Class Teacher</th>
+                            <th>Teacher on Duty</th>
+                            <th>Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var leaveout in Model)
+                        {
+                            <tr>
+                                <td>@leaveout.STUDENTNAME</td>
+                                <td>@leaveout.ADMNO</td>
+                                <td>@leaveout.CLASS</td>
+                                <td>@leaveout.LEAVINGDATE.ToShortDateString()</td>
+                                <td>@leaveout.REASONFORLEAVING</td>
+                                <td>@leaveout.RETURNDATE.ToShortDateString()</td>
+                                <td>@leaveout.CLASSTEACHER</td>
+                                <td>@leaveout.TOD</td>
+                                <td>@leaveout.PRINCIPAL</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Reports
+        </a>
+    </div>
+</div> 

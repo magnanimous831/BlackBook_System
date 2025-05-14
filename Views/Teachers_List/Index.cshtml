@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BlackBook_System.Models.Teachers_List>
+
+@{
+    ViewData["Title"] = "Teachers List";
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4"><i class="fas fa-chalkboard-teacher"></i> Teachers List</h1>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i> Create New
+        </a>
+    </p>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.FullName)</th>
+                            <th>@Html.DisplayNameFor(model => model.Gender)</th>
+                            <th>@Html.DisplayNameFor(model => model.Class)</th>
+                            <th>@Html.DisplayNameFor(model => model.Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.Username)</th>
+                            <th>@Html.DisplayNameFor(model => model.Subjects)</th>
+                            <th>@Html.DisplayNameFor(model => model.Phonenumber)</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Gender)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Class)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Subjects)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Phonenumber)</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                            <i class="fas fa-info-circle"></i> Details
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-hide alerts after 5 seconds
+        setTimeout(function () {
+            $('.alert').alert('close');
+        }, 5000);
+    </script>
+}

@@ -1,0 +1,53 @@
+@model IEnumerable<BlackBook_System.Models.StudentsEnrollment>
+
+@{
+    ViewData["Title"] = "Student Report";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4"><i class="fas fa-user-graduate"></i> Student Report</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Admission No</th>
+                            <th>Student Name</th>
+                            <th>Gender</th>
+                            <th>Date of Birth</th>
+                            <th>Class</th>
+                            <th>Admission Date</th>
+                            <th>Guardian Name</th>
+                            <th>Contact Number</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var student in Model)
+                        {
+                            <tr>
+                                <td>@student.ADMNO</td>
+                                <td>@student.STUDENTNAME</td>
+                                <td>@student.GENDER</td>
+                                <td>@student.DOB.ToShortDateString()</td>
+                                <td>@student.CLASSADMITTED</td>
+                                <td>@student.ADMISSIONDATE.ToShortDateString()</td>
+                                <td>@student.GUARDIAN_NAME</td>
+                                <td>@student.CONTACTNUMBER</td>
+                                <td>@student.County, @student.SubCounty, @student.Ward</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Reports
+        </a>
+    </div>
+</div> 

@@ -1,0 +1,47 @@
+@model IEnumerable<BlackBook_System.Models.Teachers_List>
+
+@{
+    ViewData["Title"] = "Teacher Report";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4"><i class="fas fa-chalkboard-teacher"></i> Teacher Report</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>FullName</th>
+                            <th>Username</th>
+                            <th>Phonenumber</th>
+                            <th>Email</th>
+                            <th>Subjects</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var teacher in Model)
+                        {
+                            <tr>
+                                <td>@teacher.FullName</td>
+                                <td>@teacher.Username</td>
+                                <td>@teacher.Phonenumber</td>
+                                <td>@teacher.Email</td>
+                                <td>@teacher.Subjects</td>
+                                <td>@teacher.Class</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Reports
+        </a>
+    </div>
+</div> 

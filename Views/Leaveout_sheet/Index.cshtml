@@ -1,0 +1,109 @@
+﻿@model IEnumerable<BlackBook_System.Models.Leaveout_sheet>
+
+@{
+    ViewData["Title"] = "Leaveout Sheets";
+}
+
+<h1><i class="fas fa-clipboard-list"></i> Leaveout Sheets</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="fas fa-plus-circle"></i> Create New
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.STUDENTNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ADMNO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLASS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LEAVINGDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.REASONFORLEAVING)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RETURNDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLASSTEACHER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SIGNATUREDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TODDATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRINCIPAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SIGNDATE)
+            </th>
+            <th> Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.STUDENTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ADMNO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLASS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LEAVINGDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REASONFORLEAVING)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RETURNDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLASSTEACHER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SIGNATUREDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TODDATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRINCIPAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SIGNDATE)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LEAVEOUTID" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i> Edit
+                </a> |
+                <a asp-action="Details" asp-route-id="@item.LEAVEOUTID" class="btn btn-sm btn-outline-info">
+                    <i class="fas fa-info-circle"></i> Details
+                </a> |
+                <a asp-action="Delete" asp-route-id="@item.LEAVEOUTID" class="btn btn-sm btn-outline-danger">
+                    <i class="fas fa-trash"></i> Delete
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

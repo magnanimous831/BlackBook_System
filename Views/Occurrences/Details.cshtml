@@ -1,0 +1,54 @@
+﻿@model BlackBook_System.Models.Occurrences
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Occurrences</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeacherOnDuty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeacherOnDuty)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DAILYACTIVITY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DAILYACTIVITY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PLACE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PLACE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RECORDED_BY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RECORDED_BY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.REMARKS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.REMARKS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateTimeOccurred)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateTimeOccurred)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

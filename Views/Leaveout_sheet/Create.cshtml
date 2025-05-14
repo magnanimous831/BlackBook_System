@@ -1,0 +1,200 @@
+﻿@model BlackBook_System.Models.Leaveout_sheet
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+@{
+    ViewData["Title"] = "Create Leaveout Sheet";
+}
+
+<h1><i class="fas fa-plus-circle"></i> Create Leaveout Sheet</h1>
+
+<h4><i class="fas fa-clipboard-list"></i> New Leaveout Sheet</h4>
+<!-- Search Student -->
+<div class="form-group">
+    <label>Search by ADMNO or Name:</label>
+    <input type="text" id="searchBox" class="form-control" placeholder="Enter ADMNO or Student Name" />
+     
+</div>
+
+<hr />
+
+ 
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="STUDENTNAME" class="control-label"></label>
+                <input asp-for="STUDENTNAME" id="STUDENTNAME" class="form-control" />
+                <span asp-validation-for="STUDENTNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ADMNO" class="control-label"></label>
+                <input asp-for="ADMNO" id="ADMNO" class="form-control" />
+                <span asp-validation-for="ADMNO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLASS" class="control-label"></label>
+                <input asp-for="CLASS" id="CLASS" class="form-control" />
+                <span asp-validation-for="CLASS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LEAVINGDATE" class="control-label"></label>
+                <input asp-for="LEAVINGDATE" class="form-control" />
+                <span asp-validation-for="LEAVINGDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REASONFORLEAVING" class="control-label"></label>
+                <input asp-for="REASONFORLEAVING" class="form-control" />
+                <span asp-validation-for="REASONFORLEAVING" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RETURNDATE" class="control-label"></label>
+                <input asp-for="RETURNDATE" class="form-control" />
+                <span asp-validation-for="RETURNDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLASSTEACHER" class="control-label"></label>
+                <input asp-for="CLASSTEACHER" class="form-control" />
+                <span asp-validation-for="CLASSTEACHER" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SIGNATUREDATE" class="control-label"></label>
+                <input asp-for="SIGNATUREDATE" class="form-control" />
+                <span asp-validation-for="SIGNATUREDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOD" class="control-label"></label>
+                <input asp-for="TOD" class="form-control" />
+                <span asp-validation-for="TOD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TODDATE" class="control-label"></label>
+                <input asp-for="TODDATE" class="form-control" />
+                <span asp-validation-for="TODDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRINCIPAL" class="control-label"></label>
+                <input asp-for="PRINCIPAL" class="form-control" />
+                <span asp-validation-for="PRINCIPAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SIGNDATE" class="control-label"></label>
+                <input asp-for="SIGNDATE" class="form-control" />
+                <span asp-validation-for="SIGNDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBox = document.getElementById("searchBox");
+            const studentNameInput = document.getElementById("STUDENTNAME");
+            const admnoInput = document.getElementById("ADMNO");
+            const classInput = document.getElementById("CLASS");
+            let debounceTimer;
+
+            // Create autocomplete dropdown
+            const autocompleteList = document.createElement('ul');
+            autocompleteList.className = 'autocomplete-items';
+            searchBox.parentNode.appendChild(autocompleteList);
+
+            searchBox.addEventListener('input', function (e) {
+                clearTimeout(debounceTimer);
+                const query = e.target.value.trim();
+
+                if (query.length < 2) {
+                    autocompleteList.innerHTML = '';
+                    return;
+                }
+
+                debounceTimer = setTimeout(() => {
+                    searchStudent(query);
+                }, 300);
+            });
+
+            function searchStudent(query) {
+                fetch('/Leaveout_sheet/SearchStudent?query=' + encodeURIComponent(query))
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Student not found.");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        autocompleteList.innerHTML = '';
+                        
+                        if (data) {
+                            const item = document.createElement('li');
+                            item.textContent = `${data.STUDENTNAME} (${data.ADMNO})`;
+                            item.addEventListener('click', () => {
+                                fillStudentDetails(data);
+                                autocompleteList.innerHTML = '';
+                            });
+                            autocompleteList.appendChild(item);
+                        }
+                    })
+                    .catch(error => {
+                        autocompleteList.innerHTML = '';
+                        console.error('Error:', error);
+                    });
+            }
+
+            function fillStudentDetails(data) {
+                studentNameInput.value = data.STUDENTNAME;
+                admnoInput.value = data.ADMNO;
+                classInput.value = data.CLASS;
+                searchBox.value = `${data.STUDENTNAME} (${data.ADMNO})`;
+            }
+
+            // Close autocomplete when clicking outside
+            document.addEventListener('click', function (e) {
+                if (e.target !== searchBox) {
+                    autocompleteList.innerHTML = '';
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .autocomplete-items li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .autocomplete-items li:hover {
+            background-color: #e9e9e9;
+        }
+
+        .form-group {
+            position: relative;
+        }
+    </style>
+}

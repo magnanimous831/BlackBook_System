@@ -1,0 +1,47 @@
+@model IEnumerable<BlackBook_System.Models.Occurrences>
+
+@{
+    ViewData["Title"] = "Occurrence Report";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4"><i class="fas fa-calendar-check"></i> Occurrence Report</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Teacher on Duty</th>
+                            <th>Activity</th>
+                            <th>Place</th>
+                            <th>Recorded By</th>
+                            <th>Remarks</th>
+                            <th>Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var occurrence in Model)
+                        {
+                            <tr>
+                                <td>@occurrence.TeacherOnDuty</td>
+                                <td>@occurrence.DAILYACTIVITY</td>
+                                <td>@occurrence.PLACE</td>
+                                <td>@occurrence.RECORDED_BY</td>
+                                <td>@occurrence.REMARKS</td>
+                                <td>@occurrence.DateTimeOccurred.ToString("g")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Reports
+        </a>
+    </div>
+</div> 

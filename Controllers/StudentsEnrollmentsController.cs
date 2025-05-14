@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 using System;
+=======
+﻿using System;
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,9 +18,15 @@ namespace BlackBook_System.Controllers
 {
     public class StudentsEnrollmentsController : Controller
     {
+<<<<<<< HEAD
         private readonly BlackBook_SystemContext _context;
 
         public StudentsEnrollmentsController(BlackBook_SystemContext context)
+=======
+        private readonly BlackBookDbContext _context;
+
+        public StudentsEnrollmentsController(BlackBookDbContext context)
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6
         {
             _context = context;
         }
@@ -66,7 +76,11 @@ namespace BlackBook_System.Controllers
                 {
                     if (CertificateFile != null && CertificateFile.Length > 0)
                     {
+<<<<<<< HEAD
                         var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "certificates");
+=======
+                        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "certificates");
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6
 
                         if (!Directory.Exists(uploadsFolder))
                             Directory.CreateDirectory(uploadsFolder);
@@ -137,7 +151,11 @@ namespace BlackBook_System.Controllers
                 {
                     if (CertificateFile != null && CertificateFile.Length > 0)
                     {
+<<<<<<< HEAD
                         var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "certificates");
+=======
+                        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "certificates");
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6
 
                         if (!Directory.Exists(uploadsFolder))
                             Directory.CreateDirectory(uploadsFolder);
@@ -243,4 +261,8 @@ namespace BlackBook_System.Controllers
             return Json(wards);
         }
     }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6

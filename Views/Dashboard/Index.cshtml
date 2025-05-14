@@ -1,0 +1,366 @@
+@using BlackBook_System.Models
+@model BlackBook_System.Models.DashboardStats
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4"><i class="fas fa-chart-line"></i> Dashboard</h1>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user-graduate"></i> Enrolled Students</h5>
+                    <h2 class="card-text">@Model.EnrolledStudents</h2>
+                    <a href="javascript:void(0)" onclick="loadPage('StudentsEnrollments', 'Index')" class="text-white">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-clipboard-list"></i> Leaveout Sheets</h5>
+                    <h2 class="card-text">@Model.LeaveoutSheets</h2>
+                    <a href="javascript:void(0)" onclick="loadPage('Leaveout_sheet', 'Index')" class="text-white">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-calendar-check"></i> Occurrences</h5>
+                    <h2 class="card-text">@Model.Occurrences</h2>
+                    <a href="javascript:void(0)" onclick="loadPage('Occurrences', 'Index')" class="text-white">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-gavel"></i> Discipline Cases</h5>
+                    <h2 class="card-text">@Model.DisciplineCases</h2>
+                    <a href="javascript:void(0)" onclick="loadPage('Disciplines', 'Index')" class="text-white">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teachers Card Row -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-chalkboard-teacher"></i> Teachers</h5>
+                    <h2 class="card-text">@Model.TotalTeachers</h2>
+                    <a href="javascript:void(0)" onclick="loadPage('Teachers_List', 'Index')" class="text-white">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Statistics Chart -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="fas fa-chart-bar"></i> System Statistics Overview</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="mainStatsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row 1 -->
+    <div class="row mb-4">
+        <!-- Leaveout Reasons Chart -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="fas fa-chart-pie"></i> Reasons for Leave</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="reasonChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discipline Cases Chart -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="fas fa-chart-bar"></i> Discipline Cases by Status</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="disciplineChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row 2 -->
+    <div class="row">
+        <!-- Monthly Leaveouts Chart -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="fas fa-chart-line"></i> Monthly Leaveouts</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Class-wise Leaveouts Chart -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="fas fa-chart-bar"></i> Class-wise Leaveouts</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="classChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Function to create main statistics chart
+        function createMainStatsChart() {
+            const ctx = document.getElementById('mainStatsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Enrolled Students', 'Leaveout Sheets', 'Occurrences', 'Discipline Cases', 'Teachers'],
+                    datasets: [{
+                        label: 'System Statistics',
+                        data: [
+                            @Model.EnrolledStudents,
+                            @Model.LeaveoutSheets,
+                            @Model.Occurrences,
+                            @Model.DisciplineCases,
+                            @Model.TotalTeachers
+                        ],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.8)',
+                            'rgba(75, 192, 192, 0.8)',
+                            'rgba(255, 206, 86, 0.8)',
+                            'rgba(255, 99, 132, 0.8)',
+                            'rgba(255, 159, 64, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const pages = ['StudentsEnrollments', 'Leaveout_sheet', 'Occurrences', 'Disciplines', 'Teachers_List'];
+                            loadPage(pages[index], 'Index');
+                        }
+                    }
+                }
+            });
+        }
+
+        // Function to create pie chart for reasons
+        async function createReasonChart() {
+            try {
+                const response = await fetch('/Dashboard/GetLeaveoutStats');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Reason data:', data);
+
+                const ctx = document.getElementById('reasonChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: data.map(item => item.reason),
+                        datasets: [{
+                            data: data.map(item => item.count),
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.8)',
+                                'rgba(54, 162, 235, 0.8)',
+                                'rgba(255, 206, 86, 0.8)',
+                                'rgba(75, 192, 192, 0.8)',
+                                'rgba(153, 102, 255, 0.8)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'right'
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching reason data:', error);
+            }
+        }
+
+        // Function to create discipline cases chart
+        async function createDisciplineChart() {
+            try {
+                const response = await fetch('/Dashboard/GetDisciplineStats');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Discipline data:', data);
+
+                const ctx = document.getElementById('disciplineChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.map(item => item.status),
+                        datasets: [{
+                            label: 'Number of Cases',
+                            data: data.map(item => item.count),
+                            backgroundColor: '#FF6384'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        onClick: (e, elements) => {
+                            if (elements.length > 0) {
+                                loadPage('Disciplines', 'Index');
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error creating discipline chart:', error);
+            }
+        }
+
+        // Function to create line chart for monthly data
+        async function createMonthlyChart() {
+            try {
+                const response = await fetch('/Dashboard/GetMonthlyLeaveouts');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Monthly data:', data);
+
+                const ctx = document.getElementById('monthlyChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.map(item => item.month),
+                        datasets: [{
+                            label: 'Number of Leaveouts',
+                            data: data.map(item => item.count),
+                            borderColor: '#36A2EB',
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        onClick: (e, elements) => {
+                            if (elements.length > 0) {
+                                loadPage('Leaveout_sheet', 'Index');
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error creating monthly chart:', error);
+            }
+        }
+
+        // Function to create bar chart for class-wise data
+        async function createClassChart() {
+            try {
+                const response = await fetch('/Dashboard/GetClassWiseLeaveouts');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Class data:', data);
+
+                const ctx = document.getElementById('classChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.map(item => item.class),
+                        datasets: [{
+                            label: 'Number of Leaveouts',
+                            data: data.map(item => item.count),
+                            backgroundColor: '#4BC0C0'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        onClick: (e, elements) => {
+                            if (elements.length > 0) {
+                                loadPage('Leaveout_sheet', 'Index');
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error creating class chart:', error);
+            }
+        }
+
+        // Initialize all charts when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createMainStatsChart();
+            createReasonChart();
+            createDisciplineChart();
+            createMonthlyChart();
+            createClassChart();
+        });
+    </script>
+} 

@@ -1,0 +1,231 @@
+﻿<div class="sidebar">
+    <div class="sidebar-header">
+        <h3><i class="fas fa-book"></i> BlackBook</h3>
+    </div>
+    <ul>
+      
+       
+        <li>
+            <a href="javascript:void(0)" onclick="loadPage('Dashboard', 'Index')">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <!-- Page Setup -->
+        <li>
+            <a href="javascript:void(0)" onclick="loadPage('UserManagement', 'Index')">
+                <i class="fas fa-users-cog"></i>
+                <span>Page Setup</span>
+            </a>
+        </li>
+
+        <!-- Teachers List -->
+        <li>
+            <a href="javascript:void(0)" onclick="loadPage('Teachers_List', 'Index')">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Teachers List</span>
+            </a>
+        </li>
+
+        <!-- Manage Students with Submenu -->
+        <li class="has-submenu">
+            <a href="javascript:void(0)">
+                <i class="fas fa-users"></i>
+                <span>Manage Students</span>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+             <ul class="submenu">
+                <li>
+                    <a href="javascript:void(0)" onclick="loadPage('StudentsEnrollments', 'Index')">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Student Enrollments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" onclick="loadPage('Leaveout_sheet', 'Index')">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Leaveout_sheet</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript:void(0)" onclick="loadPage('Occurrences', 'Index')">
+                <i class="fas fa-calendar-check"></i>
+                <span>Occurrences</span>
+            </a>
+        </li>          
+              <li>
+            <a href="javascript:void(0)" onclick="loadPage('Disciplines', 'Index')">
+                <i class="fas fa-gavel"></i>
+                <span>Disciplines</span>
+            </a>
+                </li>
+          
+        
+        <li>
+            <a href="javascript:void(0)" onclick="loadPage('Reports', 'Index')">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    let currentPage = '';
+
+    function loadPage(controller, action) {
+        if (currentPage === `${controller}/${action}`) {
+            return;
+        }
+
+        currentPage = `${controller}/${action}`;
+
+        fetch(`/${controller}/${action}`)
+            .then(response => response.text())
+            .then(html => {
+                // Create a temporary container
+                const tempContainer = document.createElement('div');
+                tempContainer.innerHTML = html;
+
+                // Find the main content area in the response
+                // This will look for content within the main-content div or the first main element
+                const mainContent = tempContainer.querySelector('#main-content') || 
+                                  tempContainer.querySelector('main') || 
+                                  tempContainer;
+
+                // Only update the main content area, excluding layout elements
+                document.getElementById('main-content').innerHTML = mainContent.innerHTML;
+
+                // Update the URL without refreshing the page
+                window.history.pushState({}, '', `/${controller}/${action}`);
+            })
+            .catch(error => {
+                console.error('Error loading page:', error);
+            });
+    }
+
+    // Add active class to current menu item
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuItems = document.querySelectorAll('.sidebar li a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                menuItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+
+                // Handle submenu toggle
+                const parentSubmenu = this.closest('.has-submenu');
+                if (parentSubmenu) {
+                    parentSubmenu.classList.toggle('active');
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+    .sidebar {
+        width: 200px;
+        background: linear-gradient(180deg, #2c3e50, #1a252f);
+        padding: 20px 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    
+    .sidebar-header h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sidebar-header h3 {
+        color: #fff;
+        margin: 0;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .sidebar ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar ul li {
+        margin: 5px 0;
+        padding: 0 15px;
+    }
+
+    .sidebar ul li a {
+        color: #ecf0f1;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        gap: 15px;
+    }
+
+    .sidebar ul li a i {
+        width: 20px;
+        text-align: center;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+        background-color: rgba(255,255,255,0.1);
+        color: #fff;
+        transform: translateX(5px);
+    }
+
+    .submenu {
+        list-style: none;
+        padding-left: 20px;
+        display: none;
+        margin-top: 5px;
+    }
+
+    .has-submenu .dropdown-icon {
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .has-submenu.active .dropdown-icon {
+        transform: rotate(180deg);
+    }
+
+    .has-submenu.active .submenu {
+        display: block;
+    }
+
+    .submenu li a {
+        padding: 10px 15px !important;
+        font-size: 0.9rem;
+    }
+
+    @@media (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+    }
+</style>

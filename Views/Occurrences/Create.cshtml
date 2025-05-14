@@ -1,0 +1,64 @@
+﻿@model BlackBook_System.Models.Occurrences
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1><i class="fas fa-info-circle"></i>Create Occurrence</h1>
+
+<h4><i class="fas fa-calendar-check"></i>Occurrences</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DateTimeOccurred" class="control-label"></label>
+                <input asp-for="DateTimeOccurred" class="form-control" type="datetime-local" />
+                <span asp-validation-for="DateTimeOccurred" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeacherOnDuty" class="control-label"></label>
+                <input asp-for="TeacherOnDuty" class="form-control" />
+                <span asp-validation-for="TeacherOnDuty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DAILYACTIVITY" class="control-label"></label>
+                    
+                <input asp-for="DAILYACTIVITY" class="form-control" />
+                <span asp-validation-for="DAILYACTIVITY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PLACE" class="control-label"></label>
+                <select asp-for="PLACE" class="form-control">
+                    <option value="">Select Place</option>
+                    <option value="Kitchen/Dinning Hall">Kitchen/Dinning Hall</option>
+                    <option value="Dormitory">Dormitory</option>
+                    <option value="Class">Class</option>
+                </select>
+                <span asp-validation-for="PLACE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RECORDED_BY" class="control-label"></label>
+                <input asp-for="RECORDED_BY" class="form-control" />
+                <span asp-validation-for="RECORDED_BY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="REMARKS" class="control-label"></label>
+                <input asp-for="REMARKS" class="form-control" />
+                <span asp-validation-for="REMARKS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

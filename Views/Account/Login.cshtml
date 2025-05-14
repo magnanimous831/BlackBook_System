@@ -1,4 +1,5 @@
 @model BlackBook_System.Models.LoginViewModel
+<<<<<<< HEAD
 
 @{
     ViewData["Title"] = "Login";
@@ -36,9 +37,130 @@
                 </p>
             </div>
         </form>
+=======
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Log in";
+}
+
+<div class="login-container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-5">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h2 class="mb-0"><i class="fas fa-user-circle me-2"></i>Welcome  </h2>
+                </div>
+                <div class="card-body p-4">
+                <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                        <div asp-validation-summary="All" class="alert alert-danger" role="alert"></div>
+                        
+                        <div class="form-floating mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </span>
+                                <input asp-for="Email" class="form-control" placeholder="name@example.com" />
+                            </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                        <div class="form-floating mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light">
+                                    <i class="fas fa-lock text-primary"></i>
+                                </span>
+                                <input asp-for="Password" class="form-control" placeholder="Password" />
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                        <div class="form-check mb-3">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label asp-for="RememberMe" class="form-check-label"></label>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-sign-in-alt me-2"></i>Log in
+                            </button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6
     </div>
 </div>
 
 @section Scripts {
+<<<<<<< HEAD
     @await Html.PartialAsync("_ValidationScriptsPartial")
 } 
+=======
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#Password');
+
+            togglePassword.addEventListener('click', function() {
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+}
+
+<style>
+    .login-container {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('/images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+
+    .card {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .card-header {
+        border-radius: 0.5rem 0.5rem 0 0 !important;
+    }
+
+    .form-control {
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+    }
+
+    .form-control:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .input-group-text {
+        border: 1px solid #ced4da;
+    }
+
+    .btn-primary {
+        padding: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .form-check-input:checked {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+</style> 
+>>>>>>> 8fe4a8ec22a69eab55de1ed33a7dddbfc880dfa6
