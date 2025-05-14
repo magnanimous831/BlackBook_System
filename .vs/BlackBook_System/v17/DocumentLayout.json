@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\BlackBook_System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\views\\leaveout_sheet\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\views\\leaveout_sheet\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\views\\studentsenrollments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\views\\studentsenrollments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\views\\leaveout_sheet\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\views\\leaveout_sheet\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\views\\occurrences\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\views\\occurrences\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\views\\disciplines\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\views\\disciplines\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\views\\teachers_list\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\views\\teachers_list\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|c:\\users\\user\\desktop\\blackbook_system\\blackbook_system\\controllers\\disciplinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C718F9C0-3F79-4755-926B-4A42BA0E86C7}|BlackBook_System\\BlackBook_System.csproj|solutionrelative:blackbook_system\\controllers\\disciplinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Disciplines\\Create.cshtml",
+              "RelativeDocumentMoniker": "BlackBook_System\\Views\\Disciplines\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Disciplines\\Create.cshtml",
+              "RelativeToolTip": "BlackBook_System\\Views\\Disciplines\\Create.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAewD4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T14:32:14.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Occurrences\\Create.cshtml",
+              "RelativeDocumentMoniker": "BlackBook_System\\Views\\Occurrences\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Occurrences\\Create.cshtml",
+              "RelativeToolTip": "BlackBook_System\\Views\\Occurrences\\Create.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T14:25:02.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Teachers_List\\Create.cshtml",
+              "RelativeDocumentMoniker": "BlackBook_System\\Views\\Teachers_List\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Teachers_List\\Create.cshtml",
+              "RelativeToolTip": "BlackBook_System\\Views\\Teachers_List\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T14:15:57.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\StudentsEnrollments\\Create.cshtml",
+              "RelativeDocumentMoniker": "BlackBook_System\\Views\\StudentsEnrollments\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\StudentsEnrollments\\Create.cshtml",
+              "RelativeToolTip": "BlackBook_System\\Views\\StudentsEnrollments\\Create.cshtml",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAmwHUAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T14:05:18.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DisciplinesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Controllers\\DisciplinesController.cs",
+              "RelativeDocumentMoniker": "BlackBook_System\\Controllers\\DisciplinesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Controllers\\DisciplinesController.cs",
+              "RelativeToolTip": "BlackBook_System\\Controllers\\DisciplinesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T13:17:09.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Leaveout_sheet\\Index.cshtml",
+              "RelativeDocumentMoniker": "BlackBook_System\\Views\\Leaveout_sheet\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Leaveout_sheet\\Index.cshtml",
+              "RelativeToolTip": "BlackBook_System\\Views\\Leaveout_sheet\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAewA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T09:48:21.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Leaveout_sheet\\Create.cshtml",
+              "RelativeDocumentMoniker": "BlackBook_System\\Views\\Leaveout_sheet\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BlackBook_System\\BlackBook_System\\Views\\Leaveout_sheet\\Create.cshtml",
+              "RelativeToolTip": "BlackBook_System\\Views\\Leaveout_sheet\\Create.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAewA8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-12T08:49:29.699Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
